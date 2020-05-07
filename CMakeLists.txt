@@ -6,6 +6,11 @@
 # CMake minimum version
 cmake_minimum_required(VERSION 2.4)
 
+# set policy
+if(COMMAND cmake_policy)
+    cmake_policy(SET CMP0003 NEW)
+endif(COMMAND cmake_policy)
+
 # project name and language
 project(jn CXX RC)
 
@@ -35,8 +40,13 @@ endif()
 
 ##############################################################################
 
+# libjn.a
+add_library(libjn STATIC jn.cpp)
+set_target_properties(libjn PROPERTIES PREFIX "")
+target_link_libraries(libjn winmm)
+
 # jn.exe
-add_executable(jn jn.cpp jn_res.rc)
-target_link_libraries(jn comctl32 winmm)
+add_executable(jn main.cpp jn_res.rc)
+target_link_libraries(jn libjn)
 
 ##############################################################################
