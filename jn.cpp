@@ -17,6 +17,7 @@ const char *JN_wide_to_ansi(int codepage, const wchar_t *str)
 
 struct DATA
 {
+    long long value;
     int nWaveID;
     int nHiraID;
     int nKataID;
@@ -26,8 +27,8 @@ struct DATA
     std::wstring kanji;
 };
 
-#define DEFINE_DATA(wave_id, hira_id, kata_id, kanji_id, higa, kata, kanji, wave_file) \
-    { wave_id, hira_id, kata_id, kanji_id },
+#define DEFINE_DATA(value, wave_id, hira_id, kata_id, kanji_id, higa, kata, kanji, wave_file) \
+    { value, wave_id, hira_id, kata_id, kanji_id },
 
 static DATA s_data[] =
 {
