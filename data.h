@@ -1,3 +1,4 @@
+/* UTF-8 */
 DEFINE_DATA(0, IDR_WAVE_0, IDS_HIRAGANA_0, IDS_KATAKANA_0, IDS_KANJI_0, "ぜろ", "ゼロ", "零", "res/00-zero.wav")
 DEFINE_DATA(1, IDR_WAVE_1, IDS_HIRAGANA_1, IDS_KATAKANA_1, IDS_KANJI_1, "いち", "イチ", "一", "res/01-ichi.wav")
 DEFINE_DATA(2, IDR_WAVE_2, IDS_HIRAGANA_2, IDS_KATAKANA_2, IDS_KANJI_2, "に", "ニ", "二", "res/02-ni.wav")
