@@ -21,7 +21,6 @@ static void JN_print_japanese_number(long long number)
     std::wstring str;
 
     str = JN_get_hiragana_number(number, false);
-    printf("%d\n", str.size());
     printf("%s\n", JN_wide_to_ansi(SHIFTJIS_CODEPAGE, str.c_str()));
 
     str = JN_get_katakana_number(number, false);
